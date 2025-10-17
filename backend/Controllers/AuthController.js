@@ -1,5 +1,5 @@
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+const bcrypt = require ("bcrypt");
+const jwt = require ("jsonwebtoken")
 const UserModel = require("../Models/User");
 
 // ✅ Signup Controller
@@ -16,7 +16,8 @@ const signup = async (req, res) => {
     }
 
     // 2. Check if user already exists
-    const existingUser = await UserModel.findOne({ email });
+    const existingUser = await UserModel.findOne({ email})
+
     if (existingUser) {
       return res.status(409).json({
         success: false,
